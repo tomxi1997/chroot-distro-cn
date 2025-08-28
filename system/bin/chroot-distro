@@ -668,8 +668,17 @@ For more details, refer to the documentation or run '$script help'."
 
 # Notice: if you change one of the base urls, remember to check that the full download link is still correct
 # as some of the full urls may have the version information multiple times
-proot_distro_rootfs_base_url=https://github.com/termux/proot-distro/releases/download 
-anlinux_rootfs_base_url=https://github.com/EXALAB/Anlinux-Resources
+#proot_distro_rootfs_base_url=https://github.com/termux/proot-distro/releases/download 
+#anlinux_rootfs_base_url=https://github.com/EXALAB/Anlinux-Resources
+# GitHub 国内镜像源（优先推荐 FastGit，备选阿里云）
+proot_distro_rootfs_base_url=https://download.fastgit.org/termux/proot-distro/releases/download
+# 若 FastGit 不稳定，可替换为阿里云 GitHub 镜像：
+# proot_distro_rootfs_base_url=https://github.moeyy.xyz/https://github.com/termux/proot-distro/releases/download
+
+anlinux_rootfs_base_url=https://download.fastgit.org/EXALAB/Anlinux-Resources
+# Anlinux 备选阿里云镜像：
+# anlinux_rootfs_base_url=https://github.moeyy.xyz/https://github.com/EXALAB/Anlinux-Resources
+
 # proot distro rootfs: 
 debian_rootfs_base_url_prootdistro=$proot_distro_rootfs_base_url
 openkylin_rootfs_base_url=$proot_distro_rootfs_base_url/v4.10.0
@@ -679,16 +688,49 @@ artix_rootfs_base_url=$proot_distro_rootfs_base_url/v4.6.0
 deepin_rootfs_base_url=$proot_distro_rootfs_base_url/v4.16.0
 rocky_rootfs_base_url=$proot_distro_rootfs_base_url/v4.20.0
 # Official rootfs: 
-ubuntu_rootfs_base_url=https://cdimage.ubuntu.com/ubuntu-base/releases
-kali_rootfs_base_url=http://kali.download/nethunter-images
-alpine_rootfs_base_url=http://dl-cdn.alpinelinux.org/alpine/latest-stable/releases
-void_rootfs_base_url=https://repo-default.voidlinux.org/live/current
-archlinux_rootfs_base_url_arm=http://ca.us.mirror.archlinuxarm.org/os
-archlinux_rootfs_base_url=https://mirrors.ocf.berkeley.edu/archlinux/iso/latest
-adelie_rootfs_base_url=https://distfiles.adelielinux.org/adelie/1.0-beta6/iso
-gentoo_rootfs_base_url=https://distfiles.gentoo.org/releases
-chimera_rootfs_base_url=https://repo.chimera-linux.org/live/latest
+#ubuntu_rootfs_base_url=https://cdimage.ubuntu.com/ubuntu-base/releases
+#kali_rootfs_base_url=http://kali.download/nethunter-images
+#alpine_rootfs_base_url=http://dl-cdn.alpinelinux.org/alpine/latest-stable/releases
+#void_rootfs_base_url=https://repo-default.voidlinux.org/live/current
+#archlinux_rootfs_base_url_arm=http://ca.us.mirror.archlinuxarm.org/os
+#archlinux_rootfs_base_url=https://mirrors.ocf.berkeley.edu/archlinux/iso/latest
+#adelie_rootfs_base_url=https://distfiles.adelielinux.org/adelie/1.0-beta6/iso
+#gentoo_rootfs_base_url=https://distfiles.gentoo.org/releases
+#chimera_rootfs_base_url=https://repo.chimera-linux.org/live/latest
 #manjaro_rootfs_base_url=https://github.com/manjaro-arm/rootfs
+
+#国内加速地址
+# Ubuntu：阿里云镜像（覆盖全架构，同步及时）
+ubuntu_rootfs_base_url=https://mirrors.aliyun.com/ubuntu-base/releases
+
+# Kali Nethunter：中科大镜像（国内 Kali 资源主要镜像站）
+kali_rootfs_base_url=https://mirrors.ustc.edu.cn/kali-images/nethunter-images
+
+# Alpine：阿里云镜像（Alpine 官方推荐国内镜像，速度快）
+alpine_rootfs_base_url=https://mirrors.aliyun.com/alpine/latest-stable/releases
+
+# Void Linux：中科大镜像（国内唯一稳定的 Void 镜像站）
+void_rootfs_base_url=https://mirrors.ustc.edu.cn/voidlinux/live/current
+
+# ArchLinux ARM：清华大学镜像（ARM 架构专用，同步及时）
+archlinux_rootfs_base_url_arm=https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/os
+
+# ArchLinux x86_64：清华大学镜像（国内 Arch 主力镜像，资源完整）
+archlinux_rootfs_base_url=https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest
+
+# Adelie Linux：中科大镜像（小众发行版，中科大提供镜像支持）
+adelie_rootfs_base_url=https://mirrors.ustc.edu.cn/adelie/1.0-beta6/iso
+
+# Gentoo：中科大镜像（Gentoo 国内核心镜像，覆盖全版本）
+gentoo_rootfs_base_url=https://mirrors.ustc.edu.cn/gentoo/releases
+
+# Chimera Linux：中科大镜像（小众发行版，中科大同步镜像）
+chimera_rootfs_base_url=https://mirrors.ustc.edu.cn/chimera-linux/live/latest
+
+# Manjaro ARM：清华大学镜像（Manjaro ARM 官方国内镜像）
+manjaro_rootfs_base_url=https://mirrors.tuna.tsinghua.edu.cn/manjaro-arm/rootfs
+
+
 # AnLinux rootfs: 
 debian_rootfs_base_url_anlinux=$anlinux_rootfs_base_url/raw/master/Rootfs/Debian
 parrot_rootfs_base_url=$anlinux_rootfs_base_url/raw/master/Rootfs/Parrot
